@@ -1,0 +1,21 @@
+.div-cars{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: bisque;
+    border-top: 5%;
+}
+
+ul {
+    padding: 10px;
+    border-radius: 10px;
+    padding-left: 3%;
+    border: solid 2px black;
+    
+    
+}
+li{
+    font-weight: bolder;
+    list-style: none;
+}
