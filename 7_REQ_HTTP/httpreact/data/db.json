@@ -24,6 +24,26 @@
       "id": "b006",
       "name": "Camiseta Amarela",
       "price": "60.0"
+    },
+    {
+      "id": "0dda",
+      "name": "Camiseta gay",
+      "price": "60.0"
+    },
+    {
+      "id": "e729",
+      "name": "teclado mecânico",
+      "price": "250.0"
+    },
+    {
+      "id": "6b51",
+      "name": "cadeira",
+      "price": "300"
+    },
+    {
+      "id": "6cb6",
+      "name": "mouse",
+      "price": "500"
     }
   ]
 }
