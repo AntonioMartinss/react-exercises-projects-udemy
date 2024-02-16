@@ -6,14 +6,13 @@ import './App.css'
 import { useFetch } from './hooks/useFetch'
 
 
+
 const url = "http://localhost:3000/products"
 function App() {
   const [products, setProducts] = useState([])
-
-
   // 4 - custom hook
 
-  const { data: items, httpConfig } = useFetch(url);
+  const { data: items, httpConfig, loading, error } = useFetch(url);
 
  
  
@@ -44,6 +43,9 @@ function App() {
   //   fetchData()
   // }, [])
 
+  
+
+ 
   // 2 - add products
 
    const handleSubmit = async (e) => {
@@ -81,19 +83,29 @@ function App() {
     setPrice("");
    }
 
+   // Challenge 6
+
+ const handleRemove = (id) => {
+  httpConfig(id, "DELETE")
+ }
+
+
   return (
     <>
       <div className="App">
         <h1>Lista de produtos:</h1>
+        {/* 6 - loading */}
+        {loading && <p>Carregando dados...</p>}
+        {error && <p>{error}</p>}
+        {!error && (
         <ul>
-
           {/* 4- custom hook - utilizamos o items && como um IF, já que no nosso  hook ele inicializa como 
           null, esta verificação serve para ver se é um array, um valor ou existam, caso sim, ele executa
           a função normalmente*/}
           {items && items.map((product) => (
-            <li key={product.id}>{product.name} - R$ {product.price}</li>
+            <li key={product.id}>{product.name} - R$ {product.price} - <button onClick={() => handleRemove(product.id)}>Remover</button></li>
           ))}
-        </ul>
+        </ul>)}
         <div className="add-product">
           <form  onSubmit={handleSubmit}>
             <label>
@@ -104,7 +116,9 @@ function App() {
               Preço:
               <input type="number" name="price" value={price} onChange={(e) => setPrice(e.target.value)} />
             </label>
-            <input type="submit" value="Criar novo produto!" />
+            {/* State de Loading no POST*/}
+            {loading &&  <input type="submit" disabled value="Aguarde..." />}
+           {!loading &&  <input type="submit" value="Criar novo produto!" />}
           </form>
         </div>
       </div>

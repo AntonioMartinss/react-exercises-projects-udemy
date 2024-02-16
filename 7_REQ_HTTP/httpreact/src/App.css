@@ -1,15 +1,37 @@
-.add-product{
-    border-top: 1px solid black;
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+.App{
+    border-right: 1px solid black;
+    height: 100%;
+    width: 30%;
+    background-color: rgb(10, 26, 170);
+    color: white;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
 form{
     background-color: gray;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    width: 95.2%;
+    color: black;
+}
+form input[type="submit"]{
+    width: 100%;
 }
 form input{
     margin-bottom: 5px;
+}
+button{
+    margin-bottom: 5px;
+    background-color: red;
+    color: white;
+    border: solid 2px black;
+    border-radius: 10px;
+    cursor: pointer;
 }

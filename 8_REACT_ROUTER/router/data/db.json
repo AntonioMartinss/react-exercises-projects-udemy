@@ -1,0 +1,23 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "Teclado Mecânico",
+            "price": 250.0,
+            "image": "https://th.bing.com/th/id/R.411183295e33d13b835efc714473fbeb?rik=KtyRiCIjJ1UIGA&pid=ImgRaw&r=0"
+        },
+        {
+            "id": "2",
+            "name": "Monitor",
+            "price": 300,
+            "image": "https://imgs.casasbahia.com.br/55058301/1g.jpg?imwidth=500"
+        },
+        {
+            "id": "3",
+            "name": "Suporte Microfone",
+            "price": 70.0,
+            "image": "https://http2.mlstatic.com/D_NQ_NP_614019-MLB71426042080_092023-O.webp"
+        }
+    ]
+
+}
